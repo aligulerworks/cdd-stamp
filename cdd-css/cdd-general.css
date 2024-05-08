@@ -1,0 +1,285 @@
+* {
+  overscroll-behavior: none;
+  /* VAR(S) */
+  /* fonts */
+
+  --font-content: "Urbanist", sans-serif;
+  --font-button: "Urbanist", sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  font-size: 1.11vw;
+
+  /* COLOURS - RE-CREATE */
+
+  /* shadows */
+
+  /* COLOURS */
+
+  /* colors light*/
+
+  --background-grey: rgba(244, 244, 244, 1);
+
+  --green: 0, 210, 84;
+
+  --orange: rgba(255, 153, 70, 1);
+  --orange-88: rgba(255, 153, 70, 0.88);
+
+  --dark: rgba(0, 0, 0, 0.06);
+  --darker: rgba(0, 0, 0, 0.11);
+  --darkest: rgba(0, 0, 0, 0.88);
+
+  /* bw colors */
+  --col-black: rgba(0, 0, 0, 1);
+  --col-white: rgba(255, 255, 255, 1);
+
+  /* cdd colours */
+  --cdd-col-black: 0, 0, 18;
+  --cdd-col-moss: 20, 71, 82;
+  --cdd-col-red: 235, 0, 89;
+  --cdd-col-cyan: 50, 201, 207;
+  --cdd-col-white: 250, 248, 252;
+
+  /* daylight mode colours */
+  --cdd-col-back: var(--cdd-col-white);
+  --cdd-col-text: var(--cdd-col-black);
+  --cdd-col-link: var(--cdd-col-black);
+  --cdd-col-link-ho: var(--col-black);
+
+  /* night mode colours */
+  /* !will be defined by related js file (cdd-js > cdd-style-scripts.js) */
+
+  /* END - COLOURS */
+
+  /* sizings */
+  --pad-bar: 0.6rem 5rem 0.7rem 5rem;
+
+  /* transitions */
+  --trans-btn: ease-in 200ms;
+  --trans-back: ease-in 800ms;
+
+  /* borders  */
+  --border: 0.5px solid rgba(var(--shade), 0.99);
+  --border-hov: 0.5px solid rgba(var(--color), 0.44);
+  --panel-back: rgba(var(--shade), 0.33);
+  --panel-back-hov: rgba(var(--shade), 0.77);
+
+  /* effects */
+  --sha-icon: 0 0.1rem 0.1rem rgba(var(--cdd-col-text), 0.3);
+}
+
+body {
+  font-family: var(--font-content);
+  background: rgba(var(--cdd-col-back), 1);
+  color: rgba(var(--color), 1);
+  margin: 0rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: 100%;
+  display: grid;
+  justify-content: unset;
+  justify-items: unset;
+  align-content: start;
+  align-items: unset;
+  padding: 0rem;
+  object-fit: contain;
+  line-height: 1.62rem;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  transition: background-color ease-in-out 500ms, color ease-in-out 500ms,
+    background ease-in-out 500ms;
+
+  position: relative;
+}
+
+/* CDD - GENERAL / OVERALL */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+a {
+  color: rgba(var(--cdd-col-black), 1);
+}
+
+a:hover {
+  color: rgba(var(--cdd-col-black), 1);
+}
+
+/* END - CDD - GENERAL / OVERALL */
+
+/* CDD - HEADER */
+header {
+  position: fixed;
+  height: 4rem;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  align-items: center;
+  justify-items: unset;
+  gap: 1rem;
+  margin: 0;
+  padding: var(--pad-bar);
+  background: rgba(var(--cdd-col-text), 0.77);
+  list-style: none;
+  box-shadow: 0 0.1rem 0.4rem rgba(var(--cdd-col-text), 0.44);
+}
+
+.cdd-logo,
+.cdd-nav-social,
+.cdd-nav-search {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+  filter: drop-shadow(0 0.2rem 0.1rem rgba(var(--cdd-col-black), 0.33));
+}
+
+.cdd-logo {
+  justify-content: start;
+  justify-items: start;
+  gap: 0.4rem;
+}
+
+.cdd-nav-social,
+.cdd-nav-search {
+  justify-content: end;
+  justify-items: center;
+}
+
+.cdd-emblem,
+.cdd-logotype,
+.cdd-social,
+.cdd-search {
+  width: auto;
+  object-fit: contain;
+}
+
+.cdd-emblem {
+  height: 3rem;
+}
+
+.cdd-nav-main li {
+  margin: 0;
+  padding: 0;
+}
+
+.cdd-nav-main li a {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
+  height: 100%;
+  color: rgba(var(--cdd-col-back), 1);
+}
+.cdd-nav-main li a:hover {
+  color: rgba(var(--col-white), 1);
+}
+
+.cdd-nav-social {
+  gap: 1rem;
+}
+
+.cdd-logotype {
+  height: 1.4rem;
+}
+
+/* ICONS  */
+
+.cdd-icon {
+  display: grid;
+  width: fit-content;
+  filter: drop-shadow(var(--sha-icon));
+
+  border-radius: 100%;
+  border: 0.1rem solid red;
+
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+  place-self: center;
+  place-content: center;
+  place-items: center;
+  overflow: visible;
+}
+
+.cdd-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: height 600ms ease, width 600ms ease;
+}
+
+.cdd-icon:hover img {
+  height: 120%;
+  width: 120%;
+  transition: height 200ms ease, width 200ms ease;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  color: rgba(var(--cdd-col-back), 1);
+  align-items: center;
+}
+
+nav-2 {
+  justify-self: end;
+}
+
+/* GRAPH PAGE */
+
+.main {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 4rem 0 0 0;
+  padding: 0;
+
+  display: grid;
+  align-content: start;
+}
+
+.graph-topbar {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  padding: var(--pad-bar);
+  background: rgba(var(--cdd-col-text), 0.88);
+  border-bottom: 0.02rem solid rgba(var(--cdd-col-back), 1);
+  display: grid;
+  justify-content: start;
+  align-content: center;
+}
+
+.graph-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.graph-nav,
+.graph-body {
+  grid-row: 2;
+  height: 50rem;
+}
+
+.graph-nav {
+  background: lightskyblue;
+}
+
+.graph-body {
+  background: lightsalmon;
+}
+
+/* END - GRAPH PAGE */
