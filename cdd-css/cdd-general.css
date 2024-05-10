@@ -23,13 +23,6 @@
 
   --green: 0, 210, 84;
 
-  --orange: rgba(255, 153, 70, 1);
-  --orange-88: rgba(255, 153, 70, 0.88);
-
-  --dark: rgba(0, 0, 0, 0.06);
-  --darker: rgba(0, 0, 0, 0.11);
-  --darkest: rgba(0, 0, 0, 0.88);
-
   /* bw colors */
   --col-black: rgba(0, 0, 0, 1);
   --col-white: rgba(255, 255, 255, 1);
@@ -41,13 +34,15 @@
   --cdd-col-cyan: 50, 201, 207;
   --cdd-col-white: 250, 248, 252;
 
-  /* daylight mode colours */
-  --cdd-col-back: var(--cdd-col-white);
-  --cdd-col-text: var(--cdd-col-black);
-  --cdd-col-link: var(--cdd-col-black);
-  --cdd-col-link-ho: var(--col-black);
-
   /* night mode colours */
+  --col-space: var(--col-black);
+  --col-mat: var(--col-white);
+  --cdd-col-back: var(--cdd-col-black);
+  --cdd-col-text: var(--cdd-col-white);
+  --cdd-col-link: var(--cdd-col-white);
+  --cdd-col-link-ho: var(--col-white);
+
+  /* daylight mode colours */
   /* !will be defined by related js file (cdd-js > cdd-style-scripts.js) */
 
   /* END - COLOURS */
@@ -106,11 +101,11 @@ img {
 }
 
 a {
-  color: rgba(var(--cdd-col-black), 1);
+  color: rgba(var(--cdd-col-mat), 1);
 }
 
 a:hover {
-  color: rgba(var(--cdd-col-black), 1);
+  color: rgba(var(--col-space), 1);
 }
 
 /* END - CDD - GENERAL / OVERALL */
@@ -128,9 +123,17 @@ header {
   gap: 1rem;
   margin: 0;
   padding: var(--pad-bar);
-  background: rgba(var(--cdd-col-text), 0.77);
+  background: rgba(var(--cdd-col-text), 0.33);
   list-style: none;
   box-shadow: 0 0.1rem 0.4rem rgba(var(--cdd-col-text), 0.44);
+}
+
+header * {
+  color: rgba(var(--cdd-col-text), 0.55);
+}
+
+header *:hover {
+  color: rgba(var(--col-text), 1);
 }
 
 .cdd-logo,
@@ -179,11 +182,10 @@ header {
   letter-spacing: 0.05rem;
   font-size: 0.9rem;
   height: 100%;
-  color: rgba(var(--cdd-col-back), 1);
 }
-.cdd-nav-main li a:hover {
+/* .cdd-nav-main li a:hover {
   color: rgba(var(--col-white), 1);
-}
+} */
 
 .cdd-nav-social {
   gap: 1rem;
