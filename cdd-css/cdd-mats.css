@@ -1,0 +1,88 @@
+/* CDD - STYLES OF SITE MATERIALS  */
+
+/* DROPDOWN BUTTONS */
+/* Style the dropdown container */
+.cdd-dropdown {
+  position: relative; /* Needed for positioning the options list */
+  display: inline-block; /* Allow text to flow around the dropdown */
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+/* Style the dropdown button */
+.cdd-dropdown-button {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  height: 2.6rem;
+  overflow: hidden;
+  min-height: 100%;
+  width: 18rem;
+  min-width: fit-content;
+  border: var(--border);
+  border-radius: 1.3rem;
+  color: rgba(var(--cdd-col-text), 1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  z-index: 1;
+  position: relative;
+  background: rgba(var(--cdd-col-back), 1);
+}
+
+.cdd-dropdown-button:hover {
+  border: var(--border-hov);
+}
+
+/* Style the dropdown options list (initially hidden) */
+.cdd-dropdown-options {
+  width: 100%;
+  position: absolute;
+  top: calc(-100% + 2.6rem);
+  z-index: -1;
+  left: 0;
+  border: var(--border);
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 3.2rem 0 0 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 10.4rem; /* 2.6 * 4 */
+  background: rgba(var(--cdd-col-back), 1);
+
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 800ms ease;
+}
+
+/* Style the dropdown options (anchor tags) */
+.cdd-dropdown-options a {
+  text-decoration: none; /* Remove underline from links */
+  padding: 5px 10px;
+  display: block; /* Make each option occupy a full line */
+}
+
+/* Style the dropdown options list when hovered over the button */
+.show-block {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* TAB BARS */
+
+.cdd-tabbed-bar {
+  display: grid;
+  height: 3rem;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 3rem;
+  justify-content: stretch;
+}
+
+.cdd-tab-button {
+  height: 100%;
+}

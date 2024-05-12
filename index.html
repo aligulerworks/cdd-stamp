@@ -13,7 +13,10 @@
 
     <!-- ali - style links -->
     <link rel="stylesheet" href="./cdd-css/cdd-general.css" />
-    <script defer src="./cdd-js/cdd-style-scripts.js"></script>
+    <link rel="stylesheet" href="./cdd-css/cdd-mats.css" />
+
+    <script defer src="./cdd-js/cdd-style-general.js"></script>
+    <script defer src="./cdd-js/cdd-style-mats.js"></script>
   </head>
   <body>
     <header>
@@ -74,18 +77,59 @@
       </nav-2>
     </header>
 
-    <section class="main">
+    <section class="main main-graph">
       <div class="graph-topbar">
-        <a href="#" class="cdd-icon cdd-graph-bar-arrow" target="_blank">
-          <img
-            class="cdd-graph-bar-arrow"
-            src="./cdd-media/webP/icon-graph-bar-arrow.webp"
-            alt="graph nav opener"
-          />
-        </a>
+        <div class="cdd-dropdown">
+          <button class="cdd-dropdown-button">
+            <a href="#">
+              <img
+                class="cdd-icon"
+                src="./cdd-media/svg/ethereum-eth-logo.svg"
+                alt="Ethereum Logo"
+              /> </a
+            >Ethereum
+          </button>
+          <div class="cdd-dropdown-options">
+            <a href="#">
+              <img
+                class="cdd-icon"
+                src="./cdd-media/svg/ethereum-eth-logo.svg"
+                alt="Ethereum Logo"
+              />
+            </a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+            <a href="#">Option 4</a>
+            <a href="#">Option 5</a>
+            <a href="#">Option 6</a>
+            <a href="#">Option 7</a>
+            <a href="#">Option 8</a>
+            <a href="#">Option 9</a>
+            <a href="#">Option 10</a>
+          </div>
+        </div>
       </div>
       <div class="graph-container">
-        <div class="graph-nav"></div>
+        <div class="graph-nav">
+          <div class="cdd-tabbed-bar">
+            <button class="cdd-tab-button">Summary</button>
+            <button class="cdd-tab-button">Charts</button>
+            <button class="cdd-tab-button">
+              <a href="#" class="cdd-icon cdd-graph-bar-arrow" target="_blank">
+                <img
+                  class="cdd-graph-bar-arrow"
+                  src="./cdd-media/webP/icon-graph-bar-arrow.webp"
+                  alt="graph nav opener"
+                />
+              </a>
+            </button>
+          </div>
+
+          <div class="cdd-tabs">
+            <div class="tab-content">This is the content for Tab 1.</div>
+            <div class="tab-content">This is the content for Tab 2.</div>
+          </div>
+        </div>
         <div class="graph-body"></div>
       </div>
     </section>
