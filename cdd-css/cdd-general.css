@@ -9,8 +9,11 @@
   font-weight: 400;
   text-decoration: none;
   box-sizing: border-box;
+  line-height: normal;
 
   font-size: 1.11vw;
+
+  transform-origin: center;
 
   /* COLOURS - RE-CREATE */
 
@@ -61,13 +64,22 @@
   --trans-back: ease-in 800ms;
 
   /* borders  */
-  --border: 0.1rem solid rgba(var(--cdd-col-red), 0.77);
-  --border-hov: 0.1rem solid rgba(var(--cdd-col-red), 1);
+  --border: 0.05rem solid rgba(var(--cdd-col-text), 0.77);
+  --border-hov: 0.05rem solid rgba(var(--cdd-col-text), 1);
+
+  --border-red: 0.05rem solid rgba(var(--cdd-col-red), 0.77);
+  --border-red-hov: 0.05rem solid rgba(var(--cdd-col-red), 1);
   --panel-back: rgba(var(--shade), 0.33);
   --panel-back-hov: rgba(var(--shade), 0.77);
 
   /* effects */
   --sha-icon: 0 0.1rem 0.1rem rgba(var(--cdd-col-text), 0.3);
+
+  color: rgba(var(--cdd-col-text), 1);
+}
+
+::marker {
+  display: none;
 }
 
 /* CDD GENERAL */
@@ -95,8 +107,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  transition: background-color ease-in-out 500ms, color ease-in-out 500ms,
-    background ease-in-out 500ms;
+  transition: background-color ease-in-out 500ms, color ease-in-out 500ms;
 
   position: relative;
 }
@@ -129,9 +140,20 @@ a:hover {
 
 button {
   background: transparent;
-  border: var(--border);
+  border: var(--border-red);
   color: rgba(var(--cdd-col-text), 1);
   white-space: nowrap;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 /* END - CDD - GENERAL / OVERALL */
@@ -142,11 +164,11 @@ header {
   height: 4rem;
   width: 100%;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: auto 1fr auto auto;
   align-content: center;
   align-items: center;
   justify-items: unset;
-  gap: 1rem;
+  /* gap: 1rem; */
   margin: 0;
   padding: var(--pad-bar);
   background: rgba(var(--cdd-col-text), 0.22);
@@ -156,12 +178,11 @@ header {
 
 .cdd-logo,
 .cdd-nav-social,
-.cdd-nav-search {
+.cdd-nav-2nd {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   height: 100%;
-  gap: 1rem;
   filter: drop-shadow(0 0.2rem 0.1rem rgba(var(--cdd-col-black), 0.33));
 }
 
@@ -169,12 +190,6 @@ header {
   justify-content: start;
   justify-items: start;
   gap: 0.4rem;
-}
-
-.cdd-nav-social,
-.cdd-nav-search {
-  justify-content: end;
-  justify-items: center;
 }
 
 .cdd-emblem,
@@ -207,57 +222,34 @@ header {
   /* color: red; */
 }
 
-.cdd-nav-social {
-  gap: 1rem;
+.cdd-nav-social,
+.cdd-nav-2nd {
+  gap: 0.5rem;
+  padding: 0 0.5rem;
 }
 
+.cdd-nav-2nd {
+  padding: 0 0.5rem 0 0;
+  border-right: var(--border);
+}
+.cdd-nav-social {
+  padding: 0 0 0 0.5rem;
+}
+
+.cdd-nav-2nd {
+  border-right: var(-red);
+}
 .cdd-logotype {
   height: 1.4rem;
 }
 
-/* ICONS  */
-
-.cdd-icon {
-  display: grid;
-  width: fit-content;
-  filter: drop-shadow(var(--sha-icon));
-
-  border-radius: 100%;
-  /* border: 0.1rem solid red; */
-
-  height: 2rem;
-  width: 2rem;
-  margin: 0;
-  padding: 0;
-  place-self: center;
-  place-content: center;
-  place-items: center;
-  overflow: visible;
-}
-
-.cdd-icon img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  transition: height 600ms ease, width 600ms ease;
-}
-
-.cdd-icon:hover img {
-  height: 120%;
-  width: 120%;
-  transition: height 200ms ease, width 200ms ease;
-}
-
 nav {
+  justify-self: center;
   display: flex;
   gap: 1rem;
   text-align: center;
   color: rgba(var(--cdd-col-back), 1);
   align-items: center;
-}
-
-nav-2 {
-  justify-self: end;
 }
 
 /* GRAPH PAGE */
@@ -270,15 +262,31 @@ nav-2 {
   display: grid;
   justify-content: start;
   align-content: center;
+  align-items: center;
 
   width: 100%;
   height: 4rem;
   /* position: fixed; */
   padding: var(--pad-bar);
   /* background: rgba(var(--cdd-col-text), 1); */
-  border-bottom: 0.02rem solid rgba(var(--cdd-col-red), 1);
+  border-bottom: var(--border-red);
+  grid-auto-flow: column;
 }
 
+.cdd-coin-info-bar,
+.cdd-coin-info-bar ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.cdd-coin-info-bar {
+}
+
+/* Graphics - Main Graphic  */
 .graph-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -291,7 +299,7 @@ nav-2 {
 }
 
 .graph-nav {
-  border-right: 0.1rem solid rgba(var(--cdd-col-red), 1);
+  border-right: var(--border-red);
 }
 
 .graph-body {

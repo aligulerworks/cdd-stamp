@@ -1,31 +1,30 @@
 /* CDD - STYLES OF SITE MATERIALS  */
 
-/* DROPDOWN BUTTONS */
-/* Style the dropdown container */
-.cdd-dropdown {
+/* COIN DROPDOWN & INFO BAR */
+.cdd-dropdown,
+.cdd-coin-info-bar {
   position: relative; /* Needed for positioning the options list */
-  display: inline-block; /* Allow text to flow around the dropdown */
+  display: flex;
+  align-content: center;
   width: 100%;
+  height: 2.6rem;
   z-index: 1;
   position: relative;
 }
 
-/* Style the dropdown button */
 .cdd-dropdown-button {
   display: flex;
   gap: 1rem;
   justify-content: start;
   align-content: center;
   align-items: center;
-  height: 2.6rem;
-  overflow: hidden;
+  height: 100%;
   min-height: 100%;
+  overflow: hidden;
   width: 18rem;
   min-width: fit-content;
-  border: var(--border);
-  border-radius: 1.3rem;
-  color: rgba(var(--cdd-col-text), 1);
   padding: 0.5rem 1rem;
+
   cursor: pointer;
   text-align: left;
   z-index: 1;
@@ -34,7 +33,45 @@
 }
 
 .cdd-dropdown-button:hover {
-  border: var(--border-hov);
+  border: var(--border-red-hov);
+}
+
+.cdd-dropdown-button,
+.cdd-coin-info-bar {
+  border: var(--border-red);
+  border-radius: 1.3rem;
+  color: rgba(var(--cdd-col-text), 1);
+  padding: 0.5rem 1rem;
+}
+
+.cdd-coin-info-bar {
+  background-color: rgba(var(--cdd-col-red), 0.33);
+  padding: 0.5rem 1rem 0.5rem 19rem;
+  translate: -18rem 0;
+  z-index: -1;
+}
+
+.cdd-coin-info-bar ul {
+  gap: 1rem;
+}
+
+.cdd-coin-info-bar ul li {
+  display: grid;
+  gap: 0.2rem;
+  border-left: var(--border-red-hov);
+  padding: 0 2rem 0 0.5rem;
+}
+
+.cdd-coin-info-bar p {
+}
+
+.bar-heading {
+  font-weight: 800;
+  font-size: 0.6rem;
+}
+
+.bar-value {
+  font-size: 0.8rem;
 }
 
 /* Style the dropdown options list (initially hidden) */
@@ -44,13 +81,14 @@
   top: calc(-100% + 2.6rem);
   z-index: -1;
   left: 0;
-  border: var(--border);
+  border: var(--border-red);
   border-radius: 1.3rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 3.2rem 0 0 0;
+  box-shadow: inset 0 0rem 1rem rgba(var(--cdd-col-back), 1);
+  padding: 3.2rem 1rem 0.5rem 1rem;
+
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 10.4rem; /* 2.6 * 4 */
+  height: 20.8rem; /* 2.6 * 4 */
   background: rgba(var(--cdd-col-back), 1);
 
   /* display: none; */
@@ -58,19 +96,19 @@
   opacity: 0;
 
   transition: opacity 800ms ease;
+
+  display: grid;
+  gap: 0.5rem;
 }
 
 /* Style the dropdown options (anchor tags) */
 .cdd-dropdown-options a {
-  text-decoration: none; /* Remove underline from links */
-  padding: 5px 10px;
-  display: block; /* Make each option occupy a full line */
-}
-
-/* Style the dropdown options list when hovered over the button */
-.show-block {
-  visibility: visible;
-  opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 0.02rem solid rgba(var(--cdd-col-red), 0.44);
+  padding: 0.4rem 0;
+  z-index: -1;
 }
 
 /* TAB BARS */
@@ -85,4 +123,89 @@
 
 .cdd-tab-button {
   height: 100%;
+}
+
+.show-block {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ICONS - GENERAL */
+
+.cdd-icon {
+  display: grid;
+  width: fit-content;
+  filter: drop-shadow(var(--sha-icon));
+
+  position: relative;
+
+  border-radius: 100%;
+  border: var(--border);
+
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+  place-self: center;
+  place-content: center;
+  place-items: center;
+  overflow: visible;
+  scale: 1;
+  transition: scale 300ms ease;
+}
+
+/* icon effect */
+.cdd-icon:hover:after {
+  position: absolute;
+  translate: 0%;
+  content: "";
+  background: url(/cdd-media/svg/iconeffect-radar-rotate.svg);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  animation: rotate360 infinite 1200ms linear;
+}
+
+.cdd-graph-bar-arrow,
+.no-border {
+  border: none;
+}
+
+.cdd-icon:hover {
+  scale: 1.1;
+  transition: scale 300ms ease;
+}
+
+/* ICONS  - SVG STYLINGS */
+
+svg {
+  height: 100%;
+  width: 100%;
+  fill: transparent;
+}
+
+#cdd-icon-user {
+  height: 100%;
+  width: 100%;
+}
+
+.svg-path-solid {
+  fill: rgba(var(--cdd-col-text), 1);
+  height: 100%;
+  width: 100%;
+}
+
+.svg-arrow {
+  fill: rgba(var(--cdd-col-red), 0.88);
+  rotate: 180deg;
+}
+
+.svg-arrow:hover {
+  /* fill: rgba(var(--cdd-col-red), 1); */
+  fill: blue;
+}
+
+.svg-hidden-circle {
+  fill: transparent;
 }

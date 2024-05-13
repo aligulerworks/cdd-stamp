@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="cdd-icon-user" data-name="cdd-icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.71 90.71">
+  <defs>
+    <style>
+      .svg-hidden-circle {
+        fill: none;
+      }
+
+      .svg-hidden-circle, .cdd-user-icon{
+        stroke-width: 0px;
+      }
+
+      .cdd-user-icon {
+        fill: #faf8f2;
+      }
+    </style>
+  </defs>
+  <g id="cdd-icon-user" data-name="cdd-icon-user">
+    <g>
+      <path class="svg-hidden-circle" d="M90.71,45.36c0,21.1-14.41,38.83-33.92,43.89-3.65.96-7.49,1.46-11.44,1.46s-7.78-.5-11.43-1.46C14.41,84.19,0,66.46,0,45.36,0,20.31,20.31,0,45.35,0s45.36,20.31,45.36,45.36Z"/>
+      <g>
+        <path class="cdd-user-icon" d="M54.67,37.12c5.14-5.14,5.14-13.48,0-18.62s-13.48-5.14-18.62,0c-5.14,5.14-5.14,13.48,0,18.62,5.14,5.14,13.48,5.14,18.62,0Z"/>
+        <path class="cdd-user-icon" d="M70.42,57.81l-13.63-13.63h0s-22.87,0-22.87,0h0s-13.63,13.63-13.63,13.63c-2.21,2.21-2.21,5.8,0,8.02,2.21,2.21,5.8,2.21,8.02,0l5.61-5.61v29.03c3.65.96,7.48,1.46,11.43,1.46s7.79-.5,11.44-1.46v-29.03l5.61,5.61c2.21,2.21,5.8,2.21,8.02,0,2.21-2.21,2.21-5.8,0-8.02Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

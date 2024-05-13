@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.71 90.71">
+    <polygon class="svg-path-solid" points="33.81 70.95 66.84 45.36 33.81 19.76 33.81 70.95"/>
+    <path class="svg-hidden-circle" d="M90.71,45.36c0,21.1-14.41,38.83-33.92,43.89-3.65.96-7.49,1.46-11.44,1.46s-7.78-.5-11.43-1.46C14.41,84.19,0,66.46,0,45.36,0,20.31,20.31,0,45.35,0s45.36,20.31,45.36,45.36Z"/>
+</svg>
