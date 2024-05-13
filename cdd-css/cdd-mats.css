@@ -159,7 +159,7 @@
   position: absolute;
   translate: 0%;
   content: "";
-  background: url(/cdd-media/svg/iconeffect-radar-rotate.svg);
+  background: url(./cdd-media/svg/iconeffect-radar-rotate.svg);
   height: 100%;
   width: 100%;
   z-index: -1;
