@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const nightMode = () => {
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-back", "--cdd-col-black");
+            .style.setProperty("--cdd-col-back", "--cdd-col-white");
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-text", "--cdd-col-white");
+            .style.setProperty("--cdd-col-text", "--cdd-col-black");
           document
             .querySelector(":root")
             .style.setProperty("--shade", "11,11,11");

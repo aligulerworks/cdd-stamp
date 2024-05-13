@@ -45,7 +45,7 @@
 }
 
 .cdd-coin-info-bar {
-  background-color: rgba(var(--cdd-col-red), 0.33);
+  background-color: rgba(var(--cdd-col-red), 0.22);
   padding: 0.5rem 1rem 0.5rem 19rem;
   translate: -18rem 0;
   z-index: -1;
@@ -117,7 +117,7 @@
   display: grid;
   height: 3rem;
   width: 100%;
-  grid-template-columns: 1fr 1fr 3rem;
+  grid-template-columns: 1fr 3rem;
   justify-content: stretch;
 }
 
@@ -128,6 +128,24 @@
 .show-block {
   visibility: visible;
   opacity: 1;
+}
+
+.tab-content {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+.cdd-chart-arrow {
+  display: flex;
+  width: 100%;
+}
+.cdd-dropdown-chartoptions {
+  display: grid;
+  gap: 1rem;
 }
 
 /* ICONS - GENERAL */
@@ -167,9 +185,10 @@
   animation: rotate360 infinite 1200ms linear;
 }
 
-.cdd-graph-bar-arrow,
+.no-border:hover:after,
 .no-border {
   border: none;
+  background: none;
 }
 
 .cdd-icon:hover {

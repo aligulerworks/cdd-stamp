@@ -57,18 +57,18 @@
   /* END - COLOURS */
 
   /* sizings */
-  --pad-bar: 0.6rem 5rem 0.7rem 5rem;
+  --pad-bar: 0.8rem 5rem 0.5rem 5rem;
 
   /* transitions */
   --trans-btn: ease-in 200ms;
   --trans-back: ease-in 800ms;
 
   /* borders  */
-  --border: 0.05rem solid rgba(var(--cdd-col-text), 0.77);
-  --border-hov: 0.05rem solid rgba(var(--cdd-col-text), 1);
+  --border: 0.08rem solid rgba(var(--cdd-col-text), 0.77);
+  --border-hov: 0.08rem solid rgba(var(--cdd-col-text), 1);
 
-  --border-red: 0.05rem solid rgba(var(--cdd-col-red), 0.77);
-  --border-red-hov: 0.05rem solid rgba(var(--cdd-col-red), 1);
+  --border-red: 0.08rem solid rgba(var(--cdd-col-red), 0.77);
+  --border-red-hov: 0.08rem solid rgba(var(--cdd-col-red), 1);
   --panel-back: rgba(var(--shade), 0.33);
   --panel-back-hov: rgba(var(--shade), 0.77);
 
@@ -172,8 +172,23 @@ header {
   margin: 0;
   padding: var(--pad-bar);
   background: rgba(var(--cdd-col-text), 0.22);
+
   list-style: none;
-  box-shadow: 0 0.1rem 0.4rem rgba(var(--cdd-col-text), 0.44);
+  /* box-shadow: 0 0.1rem 0.4rem rgba(var(--cdd-col-back), 1); */
+}
+
+header:after {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  width: 100%;
+  height: 0.4rem;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--cdd-col-red), 1) 0%,
+    rgba(var(--cdd-col-red), 0) 100%
+  );
+  /* opacity: 0.6; */
 }
 
 .cdd-logo,
@@ -204,23 +219,47 @@ header {
   height: 3rem;
 }
 
+/* - MAIN NAV */
 .cdd-nav-main li {
   margin: 0;
   padding: 0;
+  font-weight: 600;
 }
 
 .cdd-nav-main li a {
+  display: grid;
   text-transform: uppercase;
-  font-weight: 600;
+  text-align: center;
   letter-spacing: 0.05rem;
   font-size: 0.9rem;
   height: 100%;
-  color: rgba(var(--cdd-col-text), 0.66);
+  color: rgba(var(--cdd-col-text), 0.88);
+  place-content: center;
+  place-items: center;
 }
 .cdd-nav-main li a:hover {
   color: rgba(var(--cdd-col-ink), 1);
   /* color: red; */
 }
+
+.active {
+  position: relative;
+  font-weight: 800;
+}
+
+.active:after {
+  display: grid;
+  position: fixed;
+  content: "";
+  height: 0.6rem;
+  width: 0.6rem;
+  background: rgba(var(--cdd-col-red), 1);
+  z-index: 1;
+  border-radius: 0.5rem 0.5rem 0 0;
+  translate: 0 1.57rem;
+}
+
+/* END - MAIN NAV */
 
 .cdd-nav-social,
 .cdd-nav-2nd {
