@@ -163,6 +163,22 @@ li {
   padding: 0;
 }
 
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
 /* END - CDD - GENERAL / OVERALL */
 
 /* CDD - HEADER */
@@ -333,15 +349,17 @@ nav {
 }
 
 /* Graphics - Main Graphic  */
-.graph-container {
+.graph-columns {
   display: grid;
   grid-template-columns: 18rem 1fr;
+  height: 100%;
+  overflow: hidden;
 }
 
 .graph-nav,
 .graph-body {
-  grid-row: 2;
-  height: 92rem;
+  /* grid-row: 2; */
+  height: 100%;
 }
 
 .graph-nav {
@@ -395,6 +413,28 @@ nav {
 }
 .cdd-chartlist-sublist li {
   padding: 0 0 0 4rem;
+}
+
+/* Graph Container */
+.graph-body {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  align-content: start;
+}
+
+.graph-heading {
+  width: fit-content;
+}
+
+.graph-container {
+  display: grid;
+  width: 100%;
+  height: 36rem;
+  border: var(--border-red);
+  border-radius: 1rem;
+  background-color: rgba(var(--cdd-col-red), 0.11);
 }
 
 /* END - GRAPH PAGE */
