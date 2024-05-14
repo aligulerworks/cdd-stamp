@@ -11,6 +11,9 @@
   box-sizing: border-box;
   line-height: normal;
 
+  min-width: fit-content;
+  min-height: fit-content;
+
   font-size: 1.11vw;
 
   transform-origin: center;
@@ -76,6 +79,10 @@
   --sha-icon: 0 0.1rem 0.1rem rgba(var(--cdd-col-text), 0.3);
 
   color: rgba(var(--cdd-col-text), 1);
+
+  /* transitions  */
+  --trans-fill: fill 400ms ease;
+  --trans-rot: rotate 400ms ease;
 }
 
 ::marker {
@@ -328,7 +335,7 @@ nav {
 /* Graphics - Main Graphic  */
 .graph-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 18rem 1fr;
 }
 
 .graph-nav,
@@ -342,6 +349,52 @@ nav {
 }
 
 .graph-body {
+}
+
+/* Graphic - Chartlists */
+.cdd-lists {
+  display: grid;
+  align-content: start;
+  /* justify-content: end; */
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.cdd-chartlist-main,
+.cdd-chartlist-sublist {
+  display: grid;
+  gap: 1rem;
+}
+
+.cdd-lists-content {
+  display: grid;
+  align-content: start;
+}
+
+.cdd-chartlist-main li > span {
+  width: 100%;
+  display: grid;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  height: 2rem;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.cdd-chartlist-main li > li span:hover {
+  font-weight: 900;
+}
+
+.svg-arrow-chart {
+  height: 100%;
+  width: 100%;
+}
+
+.cdd-chartlist-sublist {
+  font-weight: 700;
+}
+.cdd-chartlist-sublist li {
+  padding: 0 0 0 4rem;
 }
 
 /* END - GRAPH PAGE */

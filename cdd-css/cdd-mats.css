@@ -49,6 +49,7 @@
   padding: 0.5rem 1rem 0.5rem 19rem;
   translate: -18rem 0;
   z-index: -1;
+  width: calc(100% + 19rem);
 }
 
 .cdd-coin-info-bar ul {
@@ -111,7 +112,7 @@
   z-index: -1;
 }
 
-/* TAB BARS */
+/* TAB BUTTONS */
 
 .cdd-tabbed-bar {
   display: grid;
@@ -137,15 +138,6 @@
   width: 100%;
   gap: 1rem;
   padding: 4rem;
-}
-
-.cdd-chart-arrow {
-  display: flex;
-  width: 100%;
-}
-.cdd-dropdown-chartoptions {
-  display: grid;
-  gap: 1rem;
 }
 
 /* ICONS - GENERAL */
@@ -215,16 +207,29 @@ svg {
   width: 100%;
 }
 
+#svg-arrow {
+  cursor: pointer;
+}
+
 .svg-arrow {
   fill: rgba(var(--cdd-col-red), 0.88);
   rotate: 180deg;
+  transition: var(--trans-fill);
 }
 
-.svg-arrow:hover {
-  /* fill: rgba(var(--cdd-col-red), 1); */
-  fill: blue;
+#svg-arrow:hover .svg-arrow {
+  fill: rgba(var(--cdd-col-red), 1);
 }
 
 .svg-hidden-circle {
   fill: transparent;
+}
+
+/* list arrow */
+.svg-arrow-list {
+  rotate: 0deg;
+  transition: var(--trans-rot);
+}
+#svg-arrow:active .svg-arrow-list {
+  rotate: 90deg;
 }
