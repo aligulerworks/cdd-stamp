@@ -46,15 +46,15 @@
   --cdd-col-white: 250, 248, 252;
 
   /* night mode colours */
-  --cdd-col-canvas: var(--cdd-col-black);
+  /* --cdd-col-canvas: var(--cdd-col-black);
   --cdd-col-ink: var(--col-white);
   --cdd-col-back: var(--cdd-col-black);
   --cdd-col-text: var(--cdd-col-white);
 
   --cdd-col-link: var(--cdd-col-ink);
-  --cdd-col-link-ho: var(--cdd-col-red);
+  --cdd-col-link-ho: var(--cdd-col-red); */
 
-  /* night mode colours */
+  /* day mode colours */
   /* !will be defined by related js file (cdd-js > cdd-style-scripts.js) */
 
   /* END - COLOURS */
@@ -150,6 +150,11 @@ button {
   border: var(--border-red);
   color: rgba(var(--cdd-col-text), 1);
   white-space: nowrap;
+}
+
+a,
+button {
+  cursor: pointer;
 }
 
 li {
@@ -439,3 +444,11 @@ nav {
 }
 
 /* END - GRAPH PAGE */
+
+/* CDD - COMPONENTS */
+
+.sprites {
+  right: 2rem;
+  position: absolute;
+  top: 1.12rem;
+}

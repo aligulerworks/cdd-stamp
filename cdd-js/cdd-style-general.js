@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const headElement = document.querySelector("head");
 
       // TEMPLATE AREAS
-      const sprites = document.querySelector(".sprites");
+      const sprites = document.querySelector("sprites");
       console.log(sprites);
 
       currentPage();
@@ -51,32 +51,53 @@ document.addEventListener("DOMContentLoaded", function (event) {
       let currentMode;
       const colorMode = () => {
         const nightMode = () => {
+          // colors
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-back", "--cdd-col-white");
+            .style.setProperty("--cdd-col-back", "var(--cdd-col-black)");
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-text", "--cdd-col-black");
+            .style.setProperty("--cdd-col-text", "var(--cdd-col-white)");
           document
             .querySelector(":root")
-            .style.setProperty("--shade", "11,11,11");
+            .style.setProperty("--cdd-col-ink", "var(--col-white)");
+          document
+            .querySelector(":root")
+            .style.setProperty("--cdd-col-link", "var(--cdd-col-ink)");
+          document
+            .querySelector(":root")
+            .style.setProperty("--cdd-col-link-ho", "var(--cdd-col-red)");
+
+          // mats
+          document.querySelector(":root");
           moon.style.opacity = "1";
           sun.style.opacity = "0";
           currentMode = "night";
+          console.log("NITE");
         };
         const dayMode = () => {
+          // colors
           document
             .querySelector(":root")
-            .style.setProperty("--back-color", "211,211,211");
+            .style.setProperty("--cdd-col-back", "var(--cdd-col-white)");
           document
             .querySelector(":root")
-            .style.setProperty("--color", "22,22,22");
+            .style.setProperty("--cdd-col-text", "var(--cdd-col-black)");
           document
             .querySelector(":root")
-            .style.setProperty("--shade", "244,244,244");
+            .style.setProperty("--cdd-col-ink", "var(--col-black)");
+          document
+            .querySelector(":root")
+            .style.setProperty("--cdd-col-link", "var(--cdd-col-ink)");
+          document
+            .querySelector(":root")
+            .style.setProperty("--cdd-col-link-ho", "var(--cdd-col-red)");
+
+          // mats
           moon.style.opacity = "0";
           sun.style.opacity = "1";
           currentMode = "day";
+          console.log("DAY");
         };
 
         const autoMode = () => {
