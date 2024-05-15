@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       currentPage();
 
       // Switcher Variables
+      const cddLogo = document.querySelector("#cdd-logo");
       const moon = document.querySelector("#moon");
       const sun = document.querySelector("#sun");
       const lightSwitch = document.querySelector("#light-switch");
@@ -66,13 +67,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .style.setProperty("--cdd-col-link", "var(--cdd-col-ink)");
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-link-ho", "var(--cdd-col-red)");
+            .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-red)");
 
           // mats
           document.querySelector(":root");
           moon.style.opacity = "1";
           sun.style.opacity = "0";
           currentMode = "night";
+
+          cddLogo.classList.add("nitetime");
+
           console.log("NITE");
         };
         const dayMode = () => {
@@ -91,12 +95,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .style.setProperty("--cdd-col-link", "var(--cdd-col-ink)");
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-link-ho", "var(--cdd-col-red)");
+            .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-moss)");
 
           // mats
           moon.style.opacity = "0";
           sun.style.opacity = "1";
           currentMode = "day";
+
+          cddLogo.classList.remove("nitetime");
+
           console.log("DAY");
         };
 

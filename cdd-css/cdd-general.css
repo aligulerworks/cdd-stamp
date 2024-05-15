@@ -45,14 +45,17 @@
   --cdd-col-cyan: 50, 201, 207;
   --cdd-col-white: 250, 248, 252;
 
+  /* accent colours */
+  /* --cdd-col-acc-m: var(--cdd-col-red); */
+  --cdd-col-link: var(--cdd-col-ink);
+  --cdd-col-link-ho: var(--cdd-col-acc-m);
+
   /* night mode colours */
   /* --cdd-col-canvas: var(--cdd-col-black);
   --cdd-col-ink: var(--col-white);
   --cdd-col-back: var(--cdd-col-black);
   --cdd-col-text: var(--cdd-col-white);
-
-  --cdd-col-link: var(--cdd-col-ink);
-  --cdd-col-link-ho: var(--cdd-col-red); */
+*/
 
   /* day mode colours */
   /* !will be defined by related js file (cdd-js > cdd-style-scripts.js) */
@@ -70,13 +73,13 @@
   --border: 0.08rem solid rgba(var(--cdd-col-text), 0.77);
   --border-hov: 0.08rem solid rgba(var(--cdd-col-text), 1);
 
-  --border-red: 0.08rem solid rgba(var(--cdd-col-red), 0.77);
-  --border-red-hov: 0.08rem solid rgba(var(--cdd-col-red), 1);
+  --border-acc-m: 0.08rem solid rgba(var(--cdd-col-acc-m), 0.77);
+  --border-acc-m-hov: 0.08rem solid rgba(var(--cdd-col-acc-m), 1);
   --panel-back: rgba(var(--shade), 0.33);
   --panel-back-hov: rgba(var(--shade), 0.77);
 
   /* effects */
-  --sha-icon: 0 0.1rem 0.1rem rgba(var(--cdd-col-text), 0.3);
+  --sha-icon: 0 0.1rem 0.05rem rgba(var(--cdd-col-text), 0.2);
 
   color: rgba(var(--cdd-col-text), 1);
 
@@ -88,6 +91,8 @@
 ::marker {
   display: none;
 }
+
+/* root mobile  */
 
 /* CDD GENERAL */
 
@@ -147,7 +152,7 @@ a:hover {
 
 button {
   background: transparent;
-  border: var(--border-red);
+  border: var(--border-acc-m);
   color: rgba(var(--cdd-col-text), 1);
   white-space: nowrap;
 }
@@ -213,8 +218,8 @@ header:after {
   height: 0.4rem;
   background: linear-gradient(
     180deg,
-    rgba(var(--cdd-col-red), 1) 0%,
-    rgba(var(--cdd-col-red), 0) 100%
+    rgba(var(--cdd-col-acc-m), 1) 0%,
+    rgba(var(--cdd-col-acc-m), 0) 100%
   );
   /* opacity: 0.6; */
 }
@@ -226,26 +231,66 @@ header:after {
   grid-auto-flow: column;
   align-items: center;
   height: 100%;
-  filter: drop-shadow(0 0.2rem 0.1rem rgba(var(--cdd-col-black), 0.33));
+  filter: drop-shadow(var(--sha-icon));
+
+  position: relative;
 }
 
 .cdd-logo {
+  height: 3rem;
+}
+
+.radar-rotate,
+.logo-day,
+.logo-nite {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  justify-items: start;
+  gap: 0.4rem;
+
+  position: relative;
+}
+
+.cdd-logo-radarrotate {
+  /* position: absolute; */
+  /* left: -4.171rem; */
+  z-index: -1;
+  animation: rotate360 infinite 3600ms linear;
+}
+
+.logo-day {
+  left: -3rem;
+}
+.logo-nite {
+  opacity: 0;
+  position: absolute;
+}
+
+.nitetime .logo-day {
+  opacity: 0;
+}
+
+.nitetime .logo-nite {
+  opacity: 1;
+}
+
+/* .cdd-logo {
   justify-content: start;
   justify-items: start;
   gap: 0.4rem;
-}
+} */
 
-.cdd-emblem,
+/* .cdd-logo,
 .cdd-logotype,
 .cdd-social,
 .cdd-search {
   width: auto;
   object-fit: contain;
-}
-
-.cdd-emblem {
-  height: 3rem;
-}
+} */
 
 /* - MAIN NAV */
 .cdd-nav-main li {
@@ -281,7 +326,7 @@ header:after {
   content: "";
   height: 0.6rem;
   width: 0.6rem;
-  background: rgba(var(--cdd-col-red), 1);
+  background: rgba(var(--cdd-col-acc-m), 1);
   z-index: 1;
   border-radius: 0.5rem 0.5rem 0 0;
   translate: 0 1.57rem;
@@ -336,7 +381,7 @@ nav {
   /* position: fixed; */
   padding: var(--pad-bar);
   /* background: rgba(var(--cdd-col-text), 1); */
-  border-bottom: var(--border-red);
+  border-bottom: var(--border-acc-m);
   grid-auto-flow: column;
 }
 
@@ -368,7 +413,7 @@ nav {
 }
 
 .graph-nav {
-  border-right: var(--border-red);
+  border-right: var(--border-acc-m);
 }
 
 .graph-body {
@@ -437,10 +482,12 @@ nav {
 .graph-container {
   display: grid;
   width: 100%;
-  height: 36rem;
-  border: var(--border-red);
+  height: 100%;
+  border: var(--border-acc-m);
   border-radius: 1rem;
-  background-color: rgba(var(--cdd-col-red), 0.11);
+  background-color: rgba(var(--cdd-col-acc-m), 0.11);
+  min-height: 40vh;
+  max-height: 60vh;
 }
 
 /* END - GRAPH PAGE */

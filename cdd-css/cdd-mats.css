@@ -33,19 +33,19 @@
 }
 
 .cdd-dropdown-button:hover {
-  border: var(--border-red-hov);
+  border: var(--border-acc-m-hov);
 }
 
 .cdd-dropdown-button,
 .cdd-coin-info-bar {
-  border: var(--border-red);
+  border: var(--border-acc-m);
   border-radius: 1.3rem;
   color: rgba(var(--cdd-col-text), 1);
   padding: 0.5rem 1rem;
 }
 
 .cdd-coin-info-bar {
-  background-color: rgba(var(--cdd-col-red), 0.22);
+  background-color: rgba(var(--cdd-col-acc-m), 0.22);
   padding: 0.5rem 1rem 0.5rem 19rem;
   translate: -18rem 0;
   z-index: -1;
@@ -59,7 +59,7 @@
 .cdd-coin-info-bar ul li {
   display: grid;
   gap: 0.2rem;
-  border-left: var(--border-red-hov);
+  border-left: var(--border-acc-m-hov);
   padding: 0 2rem 0 0.5rem;
 }
 
@@ -82,7 +82,7 @@
   top: calc(-100% + 2.6rem);
   z-index: -1;
   left: 0;
-  border: var(--border-red);
+  border: var(--border-acc-m);
   border-radius: 1.3rem;
   box-shadow: inset 0 0rem 1rem rgba(var(--cdd-col-back), 1);
   padding: 3.2rem 1rem 0.5rem 1rem;
@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-bottom: 0.02rem solid rgba(var(--cdd-col-red), 0.44);
+  border-bottom: 0.02rem solid rgba(var(--cdd-col-acc-m), 0.44);
   padding: 0.4rem 0;
   z-index: -1;
 }
@@ -212,13 +212,13 @@ svg {
 }
 
 .svg-arrow {
-  fill: rgba(var(--cdd-col-red), 0.88);
+  fill: rgba(var(--cdd-col-acc-m), 0.88);
   rotate: 180deg;
   transition: var(--trans-fill);
 }
 
 #svg-arrow:hover .svg-arrow {
-  fill: rgba(var(--cdd-col-red), 1);
+  fill: rgba(var(--cdd-col-acc-m), 1);
 }
 
 .svg-hidden-circle {
