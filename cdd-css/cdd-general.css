@@ -93,6 +93,11 @@
 }
 
 /* root mobile  */
+@media (orientation: portrait) {
+  * {
+    font-size: 2vw;
+  }
+}
 
 /* CDD GENERAL */
 
