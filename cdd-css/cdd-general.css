@@ -610,6 +610,11 @@ nav {
   translate: 0 -100%;
 }
 
+.footer-logo .cdd-logo-radarrotate {
+  animation: rotate360 infinite 16000ms linear;
+  z-index: 0;
+  filter: blur(1px);
+}
 .footer-logotype {
   display: grid;
   gap: 2rem;
