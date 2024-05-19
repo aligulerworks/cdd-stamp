@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const cddLogo = document.querySelector("#cdd-logo");
       const moon = document.querySelector("#moon");
       const sun = document.querySelector("#sun");
+      const invertableImg = document.querySelector(".img-invertable");
       const lightSwitch = document.querySelector("#light-switch");
       const currentHour = new Date().getHours();
       console.log(`it's ${currentHour} o'clock`);
@@ -68,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
           document
             .querySelector(":root")
             .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-red)");
+
+          invertableImg.classList.remove("lite-image");
 
           // mats
           document.querySelector(":root");
@@ -96,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
           document
             .querySelector(":root")
             .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-moss)");
+
+          invertableImg.classList.add("lite-image");
 
           // mats
           moon.style.opacity = "0";

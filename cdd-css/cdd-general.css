@@ -137,6 +137,7 @@ body {
 
   display: grid;
   align-content: start;
+  align-items: start;
 }
 
 /* CDD - GENERAL / OVERALL */
@@ -643,4 +644,31 @@ nav {
   position: absolute;
   top: 24rem;
   right: 24rem;
+}
+
+/* Home - Data Solutions  */
+.cdd-datasolutions {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 38rem;
+  padding: 0;
+}
+.cdd-datasolutions img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-self: end;
+  right: 0;
+}
+
+.cdd-datasolutions .section-content {
+  display: grid;
+  gap: 0.5rem;
+  position: relative;
+  filter: drop-shadow(0 0 3rem rgba(var(--cdd-col-back), 0.44));
+  align-items: center;
+  align-content: center;
+  text-align: right;
+  height: 32rem;
+  padding: 2rem 2rem 2rem 5rem;
 }

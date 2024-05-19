@@ -240,3 +240,15 @@ svg {
 #svg-arrow:active .svg-arrow-list {
   rotate: 90deg;
 }
+
+/* IMAGE INVERTATIONS  */
+.lite-image {
+  filter: invert(1);
+}
+
+/* SEPARATORS */
+.cdd-sep-full {
+  width: 100vw;
+  height: 3rem;
+  background: rgba(var(--cdd-col-acc-m), 1);
+}
