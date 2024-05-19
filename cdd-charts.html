@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ali - style links -->
+    <link rel="stylesheet" href="./cdd-css/cdd-general.css" />
+    <link rel="stylesheet" href="./cdd-css/cdd-mats.css" />
+    <link rel="stylesheet" href="./cdd-css/cdd-animations.css" />
+
+    <script defer src="./cdd-js/cdd-style-general.js"></script>
+    <script defer src="./cdd-js/cdd-style-mats.js"></script>
+
+    <!-- COMPONENT SCRIPTS  -->
+    <script
+      defer
+      src="./cdd-components/cdd-sprites.js"
+      type="text/javascript"
+    ></script>
+    <script
+      defer
+      src="./cdd-components/cdd-header.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body class="page page-home">
+    <header-component></header-component>
+
+    <!-- MAIN - GRAPH PAGE  -->
+    <section class="main main-graph">
+      <div class="graph-topbar">
+        <div class="cdd-coin-dropdown cdd-dropdown">
+          <button class="cdd-dropdown-button">
+            <a href="#">
+              <img
+                class="cdd-icon no-border"
+                src="./cdd-media/svg/ethereum-eth-logo.svg"
+                alt="Ethereum Logo"
+              /> </a
+            >Ethereum
+          </button>
+          <div class="cdd-dropdown-options">
+            <a href="#">
+              <img
+                class="cdd-icon no-border"
+                src="./cdd-media/svg/ethereum-eth-logo.svg"
+                alt="Ethereum Logo"
+              />Ethereum
+            </a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+            <a href="#">Option 4</a>
+            <a href="#">Option 5</a>
+            <a href="#">Option 6</a>
+            <a href="#">Option 7</a>
+            <a href="#">Option 8</a>
+            <a href="#">Option 9</a>
+            <a href="#">Option 10</a>
+          </div>
+        </div>
+
+        <div class="cdd-coin-info-bar">
+          <ul>
+            <li>
+              <p class="bar-heading">PRICE</p>
+              <p class="bar-value">$88.888.888</p>
+            </li>
+            <li>
+              <p class="bar-heading">24H %</p>
+              <p class="bar-value">$88.888.888</p>
+            </li>
+            <li>
+              <p class="bar-heading">7D %</p>
+              <p class="bar-value">$88.888.888</p>
+            </li>
+            <li>
+              <p class="bar-heading">MARKET CAP</p>
+              <p class="bar-value">$88.888.888</p>
+            </li>
+            <li>
+              <p class="bar-heading">VOLUME</p>
+              <p class="bar-value">$88.888.888</p>
+            </li>
+            <li>
+              <p class="bar-heading">SUPPLY</p>
+              <p class="bar-value">$88.888.888</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="graph-columns">
+        <div class="graph-nav">
+          <div class="cdd-tabbed-bar">
+            <!-- <button class="cdd-tab-button">Summary</button> -->
+            <button class="cdd-tab-button">Charts</button>
+            <button class="cdd-tab-button">
+              <a href="#" class="cdd-icon cdd-graph-bar-arrow no-border">
+                <svg
+                  id="svg-arrow"
+                  data-name="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 90.71 90.71"
+                >
+                  <polygon
+                    class="svg-path-solid svg-arrow"
+                    points="33.81 70.95 66.84 45.36 33.81 19.76 33.81 70.95"
+                  />
+                  <path
+                    class="svg-hidden-circle"
+                    d="M90.71,45.36c0,21.1-14.41,38.83-33.92,43.89-3.65.96-7.49,1.46-11.44,1.46s-7.78-.5-11.43-1.46C14.41,84.19,0,66.46,0,45.36,0,20.31,20.31,0,45.35,0s45.36,20.31,45.36,45.36Z"
+                  />
+                </svg>
+              </a>
+            </button>
+          </div>
+
+          <div class="cdd-lists">
+            <div class="cdd-lists-content">
+              <ul class="cdd-chartlist-main">
+                <li>
+                  <span>
+                    <svg
+                      id="svg-arrow"
+                      data-name="arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 90.71 90.71"
+                      class="svg-arrow-chart"
+                    >
+                      <polygon
+                        class="svg-path-solid svg-arrow svg-arrow-list"
+                        points="33.81 70.95 66.84 45.36 33.81 19.76 33.81 70.95"
+                      />
+                      <path
+                        class="svg-hidden-circle"
+                        d="M90.71,45.36c0,21.1-14.41,38.83-33.92,43.89-3.65.96-7.49,1.46-11.44,1.46s-7.78-.5-11.43-1.46C14.41,84.19,0,66.46,0,45.36,0,20.31,20.31,0,45.35,0s45.36,20.31,45.36,45.36Z"
+                      />
+                    </svg>
+                    Time Based
+                  </span>
+                  <ul class="cdd-chartlist-sublist">
+                    <li>Chart X1</li>
+                    <li>Chart X2</li>
+                    <li>Chart X3</li>
+                  </ul>
+                </li>
+                <li>
+                  <span>
+                    <svg
+                      id="svg-arrow"
+                      data-name="arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 90.71 90.71"
+                      class="svg-arrow-chart"
+                    >
+                      <polygon
+                        class="svg-path-solid svg-arrow svg-arrow-list"
+                        points="33.81 70.95 66.84 45.36 33.81 19.76 33.81 70.95"
+                      />
+                      <path
+                        class="svg-hidden-circle"
+                        d="M90.71,45.36c0,21.1-14.41,38.83-33.92,43.89-3.65.96-7.49,1.46-11.44,1.46s-7.78-.5-11.43-1.46C14.41,84.19,0,66.46,0,45.36,0,20.31,20.31,0,45.35,0s45.36,20.31,45.36,45.36Z"
+                      />
+                    </svg>
+                    Block Based
+                  </span>
+                  <ul class="cdd-chartlist-sublist">
+                    <li>Chart Y1</li>
+                    <li>Chart Y2</li>
+                    <li>Chart Y3</li>
+                  </ul>
+                </li>
+                <li>
+                  <span>
+                    <svg
+                      id="svg-arrow"
+                      data-name="arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 90.71 90.71"
+                      class="svg-arrow-chart"
+                    >
+                      <polygon
+                        class="svg-path-solid svg-arrow svg-arrow-list"
+                        points="33.81 70.95 66.84 45.36 33.81 19.76 33.81 70.95"
+                      />
+                      <path
+                        class="svg-hidden-circle"
+                        d="M90.71,45.36c0,21.1-14.41,38.83-33.92,43.89-3.65.96-7.49,1.46-11.44,1.46s-7.78-.5-11.43-1.46C14.41,84.19,0,66.46,0,45.36,0,20.31,20.31,0,45.35,0s45.36,20.31,45.36,45.36Z"
+                      />
+                    </svg>
+                    Smart Transaction
+                  </span>
+                  <ul class="cdd-chartlist-sublist">
+                    <li>Chart Z1</li>
+                    <li>Chart Z2</li>
+                    <li>Chart Z3</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="graph-body">
+          <h3 class="graph-heading">BLOCK BASED CHART</h3>
+          <div class="graph-container"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <sprites-component></sprites-component>
+    </section>
+  </body>
+</html>

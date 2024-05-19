@@ -7,7 +7,7 @@ class headerTemplate extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <header>
-    <a href="#" id="cdd-logo"class="cdd-logo">
+    <a href="./index.html" id="cdd-logo"class="cdd-logo">
       <div class="radar-rotate">
         <img
         class="cdd-logo-radarrotate"
@@ -38,12 +38,12 @@ class headerTemplate extends HTMLElement {
         src="./cdd-media/svg/logo/logotype-cdd-white.svg"
         alt="Logo: CDD Stamp"
       />
-    </div>
-    </a>
+        </div>
+      </a>
     <nav class="cdd-nav-main">
       <li><a href="#">About</a></li>
       <li><a href="#">Products</a></li>
-      <li><a class="active" href="#">Charts</a></li>
+      <li><a class="active" href="./cdd-charts.html">Charts</a></li>
       <li><a href="#">Team</a></li>
       <li><a href="#">Pricing</a></li>
       <li><a href="#">Analysis</a></li>
