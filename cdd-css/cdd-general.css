@@ -677,3 +677,46 @@ nav {
   height: 32rem;
   padding: 2rem 2rem 2rem 5rem;
 }
+
+.cdd-scrolling-headings {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: start;
+  overflow: hidden;
+  height: 32rem;
+  border-top: 3rem solid rgba(var(--cdd-col-acc-m), 1);
+  padding: 2rem 10rem;
+}
+
+.cdd-scrolling-headings h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+}
+
+.cdd-scrolling-headings div {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+.cdd-scrolling-headings .fixed-h3 {
+  font-weight: 900;
+}
+
+.cdd-scrolling-headings div h3 {
+  position: absolute;
+  opacity: 0;
+  font-size: 4rem;
+}
+
+.iter-1 {
+  animation: 18s heading-effect 0s linear infinite;
+}
+.iter-2 {
+  animation: 18s heading-effect 6s linear infinite;
+}
+.iter-3 {
+  animation: 18s heading-effect 12s linear infinite;
+}

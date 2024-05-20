@@ -9,3 +9,30 @@
     rotate: 360deg;
   }
 }
+
+@keyframes heading-effect {
+  0% {
+    opacity: 0;
+    color: rgba(var(--cdd-col-acc-m), 0);
+  }
+
+  60% {
+    opacity: 0;
+    color: rgba(var(--cdd-col-acc-m), 0);
+  }
+
+  80% {
+    opacity: 1;
+    color: rgba(var(--cdd-col-acc-m), 1);
+  }
+
+  90% {
+    opacity: 1;
+    color: rgba(var(--cdd-col-acc-m), 1);
+  }
+
+  100% {
+    opacity: 0;
+    color: rgba(var(--cdd-col-acc-m), 0);
+  }
+}
