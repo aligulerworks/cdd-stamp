@@ -16,23 +16,30 @@
     color: rgba(var(--cdd-col-acc-m), 0);
   }
 
-  60% {
+  10% {
+    opacity: 1;
+    color: rgba(var(--cdd-col-acc-m), 1);
+  }
+
+  20% {
+    opacity: 1;
+    color: rgba(var(--cdd-col-acc-m), 1);
+    translate: 0 0%;
+  }
+
+  28% {
+    translate: 0 -100%;
+  }
+  30% {
     opacity: 0;
     color: rgba(var(--cdd-col-acc-m), 0);
-  }
-
-  80% {
-    opacity: 1;
-    color: rgba(var(--cdd-col-acc-m), 1);
-  }
-
-  90% {
-    opacity: 1;
-    color: rgba(var(--cdd-col-acc-m), 1);
   }
 
   100% {
     opacity: 0;
     color: rgba(var(--cdd-col-acc-m), 0);
   }
+}
+
+@keyframes fading-gradient {
 }

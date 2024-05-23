@@ -70,7 +70,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .querySelector(":root")
             .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-red)");
 
-          invertableImg.classList.remove("lite-image");
+          if (invertableImg) {
+            invertableImg.classList.remove("lite-image");
+          }
 
           // mats
           document.querySelector(":root");
@@ -100,8 +102,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .querySelector(":root")
             .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-moss)");
 
-          invertableImg.classList.add("lite-image");
-
+          if (invertableImg) {
+            invertableImg.classList.add("lite-image");
+          }
           // mats
           moon.style.opacity = "0";
           sun.style.opacity = "1";

@@ -75,6 +75,9 @@
   --panel-back: rgba(var(--shade), 0.33);
   --panel-back-hov: rgba(var(--shade), 0.77);
 
+  /* radiusses */
+  --rad-img: 25%;
+
   /* effects */
   --sha-icon: 0 0.1rem 0.05rem rgba(var(--cdd-col-text), 0.2);
   --sha-button: 0 0.2rem 0.4rem rgba(var(--cdd-col-text), 0.22);
@@ -447,9 +450,6 @@ nav {
   align-items: center;
 }
 
-.cdd-coin-info-bar {
-}
-
 /* Graphics - Main Graphic  */
 .graph-columns {
   display: grid;
@@ -678,45 +678,8 @@ nav {
   padding: 2rem 2rem 2rem 5rem;
 }
 
-.cdd-scrolling-headings {
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  align-content: start;
-  overflow: hidden;
-  height: 32rem;
-  border-top: 3rem solid rgba(var(--cdd-col-acc-m), 1);
-  padding: 2rem 10rem;
-}
-
-.cdd-scrolling-headings h3 {
-  text-transform: uppercase;
-  font-weight: 100;
-  text-align: center;
-  width: 100%;
-}
-
-.cdd-scrolling-headings div {
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-}
-.cdd-scrolling-headings .fixed-h3 {
-  font-weight: 900;
-}
-
-.cdd-scrolling-headings div h3 {
-  position: absolute;
-  opacity: 0;
-  font-size: 4rem;
-}
-
-.iter-1 {
-  animation: 18s heading-effect 0s linear infinite;
-}
-.iter-2 {
-  animation: 18s heading-effect 6s linear infinite;
-}
-.iter-3 {
-  animation: 18s heading-effect 12s linear infinite;
+/* PAGES - ABOUT */
+.about-headings {
+  position: relative;
+  top: 8rem;
 }

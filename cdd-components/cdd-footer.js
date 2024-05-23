@@ -35,9 +35,7 @@ class footerTemplate extends HTMLElement {
               alt="Logo: CDD Stamp"
             />
             <p>
-              Developed by AssetWise, is a leading and trusted platform of
-              crypto, financial market data analytics and AI powered solutions
-              for institutions and professional investors.
+              Developed by AssetWise. A leading and trusted platform of crypto, financial market data analytics and AI powered solutions for institutions and professional investors.
             </p>
           </div>
         </a>

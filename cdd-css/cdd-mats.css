@@ -46,7 +46,7 @@
 
 .cdd-coin-info-bar {
   background-color: rgba(var(--cdd-col-acc-m), 0.22);
-  padding: 0.5rem 1rem 0.5rem 19rem;
+  padding: 0.5rem 1rem 0.5rem 18rem;
   translate: -18rem 0;
   z-index: -1;
   width: calc(100% + 19rem);
@@ -251,4 +251,153 @@ svg {
   width: 100vw;
   height: 3rem;
   background: rgba(var(--cdd-col-acc-m), 1);
+}
+
+/* ROLLING HEADINGS  */
+/* h3 used  */
+.cdd-scrolling-headings {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: start;
+  overflow: hidden;
+  height: 32rem;
+  padding: 2rem 10rem;
+  gap: 1rem;
+}
+
+.cdd-scrolling-headings h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+}
+
+.cdd-scrolling-headings .fixed-h3 {
+  font-weight: 900;
+}
+
+.rolling-headings {
+  height: 8rem;
+  width: 100%;
+  display: grid;
+  /* background: rgba(200, 0, 0, 0.2); */
+  justify-content: center;
+  justify-items: center;
+  align-items: end;
+  translate: 0 -3.3rem;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.rolling-headings h3 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  opacity: 0;
+  font-size: 6rem;
+  position: absolute;
+}
+
+.iter-1 {
+  animation: 18s heading-effect 0s linear infinite;
+}
+.iter-2 {
+  animation: 18s heading-effect 6s linear infinite;
+}
+.iter-3 {
+  animation: 18s heading-effect 12s linear infinite;
+}
+
+/* CDD - SITE IMAGES */
+/* roadmap image - capsule shaped*/
+.cdd-img-road {
+  width: 24rem;
+  height: 12rem;
+  object-fit: cover;
+  border: 0.1rem solid rgba(var(--cdd-col-acc-m), 1);
+  border-radius: 6rem;
+}
+
+.img-capsule-left {
+  border-radius: 0 6rem 6rem 0;
+  border-width: 0.1rem 0.1rem 0.1rem 0;
+}
+
+.img-capsule-right {
+  border-radius: 6rem 0 0 6rem;
+  border-width: 0.1rem 0rem 0.1rem 0.1rem;
+}
+
+/* roadmap - general */
+.milestone ul li {
+  list-style: disc;
+  padding: initial;
+}
+
+/* CONTAINERS  */
+/* Container - Full Width */
+.cdd-container-fw {
+  width: 100%;
+  height: fit-content;
+  padding: var(--pad-desktop);
+}
+
+/* full with & height fixed  */
+.cdd-fixed-full {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: -1;
+}
+
+.cdd-fixed-full .slow-scroll {
+  /* filter: brightness(0.5) contrast(1.2); */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  position: fixed;
+}
+
+.cdd-logo-bigback {
+  z-index: -2;
+  display: inline-flex;
+  position: fixed;
+  left: 25vw;
+  width: 50vw;
+  translate: 0 17vh;
+}
+
+.cdd-logo-bigback .cdd-logo-case {
+  translate: -100%;
+  filter: saturate(0) drop-shadow(0 0.5rem 0.5rem rgba(var(--col-black), 0.55))
+    brightness(0.4) contrast(0.9) blur(1px);
+}
+
+.cdd-logo-backdrop {
+  translate: -200%;
+  opacity: 1;
+  backdrop-filter: brightness(2.5) contrast(7.5) saturate(0);
+  z-index: -2;
+  filter: blur(39px) saturate(0);
+  border-radius: 50%;
+  overflow: visible;
+  filter: opacity(0.6) saturate(8) blur(19px) brightness(0.6) hue-rotate(415deg);
+}
+
+.cdd-logo-bigback .cdd-logo-radarrotate,
+.cdd-logo-backdrop {
+  animation: rotate360 infinite 32s linear;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(var(--cdd-col-back), 0.33);
+  position: fixed;
+  z-index: -1;
+  backdrop-filter: blur(2px);
 }

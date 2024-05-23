@@ -41,9 +41,9 @@ class headerTemplate extends HTMLElement {
         </div>
       </a>
     <nav class="cdd-nav-main">
-      <li><a href="#">About</a></li>
+      <li><a class="active"href="./about.html">About</a></li>
       <li><a href="#">Products</a></li>
-      <li><a class="active" href="./cdd-charts.html">Charts</a></li>
+      <li><a href="./cdd-charts.html">Charts</a></li>
       <li><a href="#">Team</a></li>
       <li><a href="#">Pricing</a></li>
       <li><a href="#">Analysis</a></li>
