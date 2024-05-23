@@ -689,3 +689,19 @@ nav {
   width: 32rem;
   justify-self: center;
 }
+
+.about-details {
+  display: grid;
+  justify-content: center;
+  background-color: rgba(var(--cdd-col-acc-m), 0.44);
+  backdrop-filter: blur(20px);
+  padding: 2rem 0;
+}
+
+.about-details h3 {
+  text-align: center;
+}
+
+.about-details * {
+  padding: 0 10rem;
+}
