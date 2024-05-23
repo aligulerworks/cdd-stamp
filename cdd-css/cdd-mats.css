@@ -257,8 +257,8 @@ svg {
 /* h3 used  */
 .cdd-scrolling-headings {
   display: grid;
-  justify-content: center;
-  justify-items: center;
+  /* justify-content: center; */
+  /* justify-items: center; */
   align-content: start;
   overflow: hidden;
   height: 32rem;
@@ -369,7 +369,7 @@ svg {
   z-index: -2;
   display: inline-flex;
   position: fixed;
-  left: 28vw;
+  left: 27vw;
   width: 44vw;
   translate: 0 17vh;
 }
