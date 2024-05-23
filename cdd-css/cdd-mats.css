@@ -338,11 +338,14 @@ svg {
 /* CONTAINERS  */
 /* Container - Full Width */
 .cdd-container-fw {
+  display: grid;
   width: 100%;
   height: fit-content;
   padding: var(--pad-desktop);
 }
 
+.cdd-container-padded {
+}
 /* full with & height fixed  */
 .cdd-fixed-full {
   width: 100%;
@@ -366,8 +369,8 @@ svg {
   z-index: -2;
   display: inline-flex;
   position: fixed;
-  left: 25vw;
-  width: 50vw;
+  left: 28vw;
+  width: 44vw;
   translate: 0 17vh;
 }
 

@@ -681,5 +681,11 @@ nav {
 /* PAGES - ABOUT */
 .about-headings {
   position: relative;
-  top: 8rem;
+  top: 12rem;
+  margin-bottom: -8rem;
+}
+
+.about-content p {
+  width: 32rem;
+  justify-self: center;
 }
