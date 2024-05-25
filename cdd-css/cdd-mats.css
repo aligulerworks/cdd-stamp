@@ -249,9 +249,22 @@ svg {
 /* SEPARATORS */
 .cdd-sep-full {
   width: 100vw;
-  height: 3rem;
-  background: rgba(var(--cdd-col-acc-m), 1);
+  height: 2rem;
+  background: rgba(var(--cdd-col-red), 1);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0rem 0.5rem rgba(var(--cdd-col-text), 0.44);
 }
+/* .cdd-sep-full:before {
+  content: "";
+  position: absolute;
+  background: black;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 50%;
+} */
 
 /* ROLLING HEADINGS  */
 /* h3 used  */
@@ -350,6 +363,7 @@ svg {
 .cdd-fixed-full {
   width: 100%;
   height: 100%;
+  min-height: 90vh;
   margin: 0;
   padding: 0;
   position: relative;
@@ -365,37 +379,6 @@ svg {
   position: fixed;
 }
 
-.cdd-logo-bigback {
-  z-index: -2;
-  display: inline-flex;
-  position: fixed;
-  left: 27vw;
-  width: 44vw;
-  translate: 0 17vh;
-}
-
-.cdd-logo-bigback .cdd-logo-case {
-  translate: -100%;
-  filter: saturate(0) drop-shadow(0 0.5rem 0.5rem rgba(var(--col-black), 0.55))
-    brightness(0.4) contrast(0.9) blur(1px);
-}
-
-.cdd-logo-backdrop {
-  translate: -200%;
-  opacity: 1;
-  backdrop-filter: brightness(2.5) contrast(7.5) saturate(0);
-  z-index: -2;
-  filter: blur(39px) saturate(0);
-  border-radius: 50%;
-  overflow: visible;
-  filter: opacity(0.6) saturate(8) blur(19px) brightness(0.6) hue-rotate(415deg);
-}
-
-.cdd-logo-bigback .cdd-logo-radarrotate,
-.cdd-logo-backdrop {
-  animation: rotate360 infinite 32s linear;
-}
-
 .overlay {
   height: 100vh;
   width: 100vw;
@@ -404,3 +387,23 @@ svg {
   z-index: -1;
   backdrop-filter: blur(2px);
 }
+
+/* QUOTES */
+
+q {
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.cdd-quote {
+  display: grid;
+  place-content: center;
+  background-color: rgba(var(--cdd-col-back), 0.88);
+  text-align: center;
+
+  height: 20rem;
+}
+
+.cdd-quote p "
+";

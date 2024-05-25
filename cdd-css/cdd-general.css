@@ -136,11 +136,20 @@ body {
   height: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 4rem 0 0 0;
 
   display: grid;
   align-content: start;
   align-items: start;
+}
+
+.page-name {
+  margin: 0;
+  padding: var(--pad-bar);
+}
+
+.page-name h5 {
+  padding: 0;
 }
 
 /* CDD - GENERAL / OVERALL */
@@ -181,6 +190,9 @@ li {
   list-style: none;
 }
 
+p {
+  font-size: 1.2rem;
+}
 p,
 ul,
 li {
@@ -212,6 +224,23 @@ h3 {
   font-size: 2rem;
   padding: 1rem 0;
 }
+
+h4 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 /* END - CDD - GENERAL / OVERALL */
 
 /* CDD - HEADER */
@@ -258,7 +287,7 @@ header:after {
   /* top: -0.5rem; */
   height: 4rem;
   width: 100%;
-  background-color: rgba(var(--cdd-col-back), 0.44);
+  background-color: rgba(var(--cdd-col-back), 0.33);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 0.2rem 1rem rgba(var(--cdd-col-acc-m), 1);
@@ -307,6 +336,11 @@ header:after {
   gap: 0.4rem;
 
   position: relative;
+}
+
+header .cdd-logo-case,
+header .radar-rotate {
+  width: 3rem;
 }
 
 .cdd-logo-radarrotate {
@@ -422,7 +456,7 @@ nav {
 
 .main-graph {
   position: fixed;
-  margin: 4rem 0 0 0;
+  margin: 0;
 }
 
 .graph-topbar {
@@ -625,7 +659,7 @@ nav {
 .cdd-hero {
   width: 100%;
   height: 48rem;
-  top: 0rem;
+  top: -4rem;
   position: relative;
 }
 
@@ -679,6 +713,43 @@ nav {
 }
 
 /* PAGES - ABOUT */
+
+.cdd-logo-bigback {
+  z-index: -2;
+  display: inline-flex;
+  position: fixed;
+  left: 32vw;
+  width: 36vw;
+  translate: 0 17vh;
+}
+
+.cdd-logo-bigback img {
+  height: 36vw;
+  width: auto;
+}
+
+.cdd-logo-bigback .cdd-logo-case {
+  translate: -100%;
+  filter: saturate(0) drop-shadow(0 0.5rem 0.5rem rgba(var(--col-black), 0.55))
+    brightness(0.4) contrast(0.9) blur(1px);
+}
+
+.cdd-logo-backdrop {
+  translate: -200%;
+  opacity: 1;
+  backdrop-filter: brightness(2.5) contrast(7.5) saturate(0);
+  z-index: -2;
+  filter: blur(39px) saturate(0);
+  border-radius: 50%;
+  overflow: visible;
+  filter: opacity(0.6) saturate(8) blur(19px) brightness(0.6) hue-rotate(415deg);
+}
+
+.cdd-logo-bigback .cdd-logo-radarrotate,
+.cdd-logo-backdrop {
+  animation: rotate360 infinite 32s linear;
+}
+
 .about-headings {
   position: relative;
   top: 12rem;
@@ -686,15 +757,15 @@ nav {
 }
 
 .about-content p {
-  width: 32rem;
+  width: 20rem;
   justify-self: center;
+  text-align: justify;
 }
 
 .about-details {
   display: grid;
   justify-content: center;
-  background-color: rgba(var(--cdd-col-acc-m), 0.44);
-  backdrop-filter: blur(20px);
+  background-color: rgba(var(--cdd-col-back), 1);
   padding: 2rem 0;
 }
 
@@ -704,4 +775,9 @@ nav {
 
 .about-details * {
   padding: 0 10rem;
+}
+
+/* PAGES - PRODUCTS */
+.smoked {
+  background-color: rgba(var(--cdd-col-text), 0.33);
 }

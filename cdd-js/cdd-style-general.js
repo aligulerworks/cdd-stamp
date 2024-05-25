@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .style.setProperty("--cdd-col-link", "var(--cdd-col-ink)");
           document
             .querySelector(":root")
-            .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-moss)");
+            .style.setProperty("--cdd-col-acc-m", "var(--cdd-col-cyan)");
 
           if (invertableImg) {
             invertableImg.classList.add("lite-image");
