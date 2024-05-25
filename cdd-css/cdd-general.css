@@ -159,6 +159,18 @@ img {
   object-fit: contain;
 }
 
+video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  width: auto;
+  height: fit-content;
+  overflow: hidden;
+}
+
 a {
   color: rgba(var(--cdd-col-text), 1);
 }
@@ -778,6 +790,27 @@ nav {
 }
 
 /* PAGES - PRODUCTS */
+
 .smoked {
   background-color: rgba(var(--cdd-col-text), 0.33);
+}
+
+.cdd-products {
+  display: grid;
+  gap: 6rem;
+  padding: var(--pad-bar);
+  width: 100%;
+  height: auto;
+}
+
+.cdd-product {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+
+  display: grid;
+  gap: 2rem;
+
+  height: fit-content;
 }
