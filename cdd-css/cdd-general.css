@@ -880,7 +880,7 @@ body .cdd-roadmap {
   font-size: 2rem;
   font-weight: 900;
   text-align: right;
-  width: 50%;
+  width: 15rem;
 }
 
 .cdd-info-quote div:nth-child(2) {
@@ -890,6 +890,10 @@ body .cdd-roadmap {
   justify-items: start;
   justify-self: start;
   width: 20rem;
+}
+
+.cdd-info-quote div:nth-child(2) h3 {
+  padding: 0;
 }
 
 /* PAGES - ABOUT */
