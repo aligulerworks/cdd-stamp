@@ -188,6 +188,7 @@ button {
   border-radius: 1rem;
   background: rgba(var(--cdd-col-acc-m), 0.44);
   box-shadow: var(--sha-button);
+  width: fit-content;
 }
 
 button a {
@@ -852,6 +853,43 @@ body .cdd-roadmap {
 .mile-content h3 {
   font-size: 3rem;
   font-weight: 100;
+}
+
+/* Home - Payment Info */
+.cdd-info-quote {
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+}
+
+.cdd-info-quote div:nth-child(1) {
+  display: grid;
+  justify-content: end;
+  justify-items: end;
+  align-items: center;
+  justify-self: end;
+  padding: 1rem;
+  background: rgba(var(--cdd-col-acc-m));
+  width: 24rem;
+  border-radius: 12rem 0 0 12rem;
+  height: 20rem;
+}
+
+.cdd-info-quote div:nth-child(1) > p {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: right;
+  width: 50%;
+}
+
+.cdd-info-quote div:nth-child(2) {
+  display: grid;
+  gap: 1rem;
+  justify-content: start;
+  justify-items: start;
+  justify-self: start;
+  width: 20rem;
 }
 
 /* PAGES - ABOUT */
