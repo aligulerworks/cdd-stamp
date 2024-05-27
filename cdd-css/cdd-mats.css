@@ -249,7 +249,7 @@ svg {
 /* SEPARATORS */
 .cdd-sep-full {
   width: 100vw;
-  height: 2rem;
+  height: 0.1rem;
   background: rgba(var(--cdd-col-red), 1);
   position: relative;
   z-index: 2;
@@ -322,42 +322,22 @@ svg {
   animation: 18s heading-effect 12s linear infinite;
 }
 
-/* CDD - SITE IMAGES */
-/* roadmap image - capsule shaped*/
-.cdd-img-road {
-  width: 24rem;
-  height: 12rem;
-  object-fit: cover;
-  border: 0.1rem solid rgba(var(--cdd-col-acc-m), 1);
-  border-radius: 6rem;
-}
-
-.img-capsule-left {
-  border-radius: 0 6rem 6rem 0;
-  border-width: 0.1rem 0.1rem 0.1rem 0;
-}
-
-.img-capsule-right {
-  border-radius: 6rem 0 0 6rem;
-  border-width: 0.1rem 0rem 0.1rem 0.1rem;
-}
-
-/* roadmap - general */
-.milestone ul li {
-  list-style: disc;
-  padding: initial;
-}
-
-/* CONTAINERS  */
+/* CONTAINERS & STUFF  */
 /* Container - Full Width */
-.cdd-container-fw {
+
+.smoked {
+  background-color: rgba(var(--cdd-col-text), 0.11);
+}
+
+.cdd-container-pd {
   display: grid;
   width: 100%;
   height: fit-content;
   padding: var(--pad-desktop);
 }
 
-.cdd-container-padded {
+.cdd-container-fw {
+  padding: 0;
 }
 /* full with & height fixed  */
 .cdd-fixed-full {
@@ -382,10 +362,10 @@ svg {
 .overlay {
   height: 100vh;
   width: 100vw;
-  background: rgba(var(--cdd-col-back), 0.33);
+  background: rgba(var(--cdd-col-back), 0.66);
   position: fixed;
   z-index: -1;
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
 }
 
 /* QUOTES */
@@ -399,7 +379,6 @@ q {
 .cdd-quote {
   display: grid;
   place-content: center;
-  background-color: rgba(var(--cdd-col-back), 0.88);
   text-align: center;
 
   height: 20rem;

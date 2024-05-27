@@ -81,6 +81,7 @@
   /* effects */
   --sha-icon: 0 0.1rem 0.05rem rgba(var(--cdd-col-text), 0.2);
   --sha-button: 0 0.2rem 0.4rem rgba(var(--cdd-col-text), 0.22);
+  --sha-box: 0 1rem 0.8rem 0rem rgba(var(--cdd-col-text), 0.22);
   --sha-container: 0 0rem 6rem 1rem rgba(var(--cdd-col-text), 0.22);
 
   color: rgba(var(--cdd-col-text), 1);
@@ -672,6 +673,7 @@ nav {
   width: 100%;
   height: 48rem;
   top: -4rem;
+  margin-bottom: -4rem;
   position: relative;
 }
 
@@ -722,6 +724,112 @@ nav {
   text-align: right;
   height: 32rem;
   padding: 2rem 2rem 2rem 5rem;
+}
+
+/* Home - Road Map */
+body .cdd-roadmap {
+  position: relative;
+  display: grid;
+  row-gap: 10rem;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.roadmap-header {
+  /* position: relative; */
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+}
+.line-ver {
+  position: absolute;
+  width: 0.1rem;
+  height: 100%;
+  background-color: rgba(var(--cdd-col-acc-m), 1);
+  justify-self: center;
+  margin: 12rem 0;
+}
+
+.roadmap-header h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.roadmap-header p {
+  font-weight: 900;
+  color: rgba(var(--cdd-col-acc-m), 1);
+}
+
+.cdd-roadmap .milestone {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+}
+
+/* bullets */
+.milestone ul li {
+  padding-inline-start: 2rem;
+  text-indent: -2rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+}
+.milestone ul li:before {
+  content: "●";
+  font-weight: 600;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+  height: 2rem;
+  width: 1.6rem;
+  vertical-align: text-top;
+  color: rgba(var(--cdd-col-acc-m), 1);
+  text-align: left;
+  text-indent: 0rem;
+}
+
+.milestone img {
+  width: 100%;
+  height: 32rem;
+  object-fit: cover;
+  border-color: rgba(var(--cdd-col-acc-m), 1);
+  border-style: solid;
+  box-shadow: var(--sha-box);
+}
+
+.img-capsule-left {
+  border-radius: 0 16rem 16rem 0;
+  border-width: 0.2rem 0.2rem 0.2rem 0;
+}
+
+.img-capsule-right {
+  border-radius: 16rem 0 0 16rem;
+  border-width: 0.2rem 0rem 0.2rem 0.2rem;
+}
+
+.milestone:nth-child(even) img {
+  order: 1;
+}
+
+.milestone:nth-child(even) div {
+  order: -1;
+  justify-self: end;
+  padding: 0 0 0 10rem;
+}
+
+.milestone div {
+  padding: 0 10rem 0 0;
+}
+
+.mile-content {
+  translate: 0 -2rem;
+}
+
+.mile-content h3 {
+  font-size: 3rem;
+  font-weight: 100;
 }
 
 /* PAGES - ABOUT */
@@ -777,7 +885,6 @@ nav {
 .about-details {
   display: grid;
   justify-content: center;
-  background-color: rgba(var(--cdd-col-back), 1);
   padding: 2rem 0;
 }
 
@@ -791,10 +898,6 @@ nav {
 
 /* PAGES - PRODUCTS */
 
-.smoked {
-  background-color: rgba(var(--cdd-col-text), 0.33);
-}
-
 .cdd-products {
   display: grid;
   gap: 6rem;
@@ -807,7 +910,7 @@ nav {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 2rem;
+  padding: 2rem 0;
 
   display: grid;
   gap: 2rem;
