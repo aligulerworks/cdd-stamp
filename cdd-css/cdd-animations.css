@@ -43,3 +43,25 @@
 
 @keyframes fading-gradient {
 }
+
+/* ANIMATED BACKGROUND IMAGE */
+@keyframes anibackimg {
+  0% {
+    rotate: 0deg;
+    translate: -25% -25%;
+    scale: 300%;
+    opacity: 0.16;
+  }
+
+  50% {
+    translate: 25% 25%;
+    scale: 400%;
+    opacity: 0.04;
+  }
+  100% {
+    rotate: 360deg;
+    translate: -25% -25%;
+    scale: 300%;
+    opacity: 0.16;
+  }
+}
