@@ -60,7 +60,7 @@
 
   /* sizings */
   --pad-bar: 0.8rem 5rem 0.5rem 5rem;
-  --pad-desktop: 2rem 5rem;
+  --pad-desktop: 5rem 5rem;
 
   /* transitions */
   --trans-btn: ease-in 200ms;
@@ -171,6 +171,8 @@ figure {
   width: auto;
   height: fit-content;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -910,7 +912,7 @@ body .cdd-roadmap {
 /* PAGES - ABOUT */
 
 .cdd-logo-bigback {
-  z-index: -2;
+  z-index: -3;
   display: inline-flex;
   position: fixed;
   left: 32vw;
@@ -952,7 +954,7 @@ body .cdd-roadmap {
 }
 
 .about-content p {
-  width: 20rem;
+  width: 34rem;
   justify-self: center;
   text-align: justify;
 }
@@ -991,4 +993,20 @@ body .cdd-roadmap {
   gap: 2rem;
 
   height: fit-content;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.product-headings {
+  display: flex;
+  align-items: end;
+}
+
+.product-headings * {
+  margin: 0;
+  padding: 0;
 }
