@@ -30,10 +30,6 @@
 
   --green: 0, 210, 84;
 
-  --dark: rgba(0, 0, 0, 0.06);
-  --darker: rgba(0, 0, 0, 0.11);
-  --darkest: rgba(0, 0, 0, 0.88);
-
   /* bw colors */
   --col-black: 0, 0, 0;
   --col-white: 255, 255, 255;
@@ -46,7 +42,6 @@
   --cdd-col-white: 250, 248, 252;
 
   /* accent colours */
-  /* --cdd-col-acc-m: var(--cdd-col-red); */
   --cdd-col-link: var(--cdd-col-ink);
   --cdd-col-link-ho: var(--cdd-col-acc-m);
 
@@ -96,10 +91,19 @@
   display: none;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* root mobile  */
 @media (orientation: portrait) {
   * {
-    font-size: 2vw;
+    font-size: 4vw;
+
+    /* sizings */
+    --pad-bar: 0.8rem 1rem 0.5rem 1rem;
+    --pad-desktop: 1rem 1rem;
   }
 }
 
@@ -131,6 +135,16 @@ body {
   transition: background-color ease-in-out 500ms, color ease-in-out 500ms;
 
   position: relative;
+}
+
+@media (orientation: portrait) {
+  /* check later */
+  body {
+    overflow: hidden;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
 }
 
 .main {
@@ -334,6 +348,18 @@ header:after {
   ); */
 }
 
+@media (orientation: portrait) {
+  header {
+    position: fixed;
+    grid-template-columns: unset;
+    height: fit-content;
+    top: 0rem;
+    align-content: start;
+    align-items: start;
+    padding: 0;
+  }
+}
+
 .cdd-logo,
 .cdd-nav-social,
 .cdd-nav-2nd {
@@ -350,6 +376,15 @@ header:after {
   height: 3rem;
 }
 
+@media (orientation: portrait) {
+  .cdd-logo {
+    margin: 1rem;
+    z-index: 12;
+    justify-content: start;
+    width: fit-content;
+  }
+}
+
 .radar-rotate,
 .logo-day,
 .logo-nite {
@@ -363,6 +398,14 @@ header:after {
   gap: 0.4rem;
 
   position: relative;
+}
+
+@media (orientation: portrait) {
+  .radar-rotate,
+  .logo-day,
+  .logo-nite {
+    grid-auto-flow: unset;
+  }
 }
 
 header .cdd-logo-case,
@@ -393,6 +436,29 @@ header .radar-rotate {
   opacity: 1;
 }
 
+.cdd-logotype {
+  height: 1.4rem;
+}
+
+@media (orientation: portrait) {
+  .cdd-logotype {
+    height: auto;
+  }
+
+  .radar-rotate {
+    position: absolute;
+  }
+
+  .logo-day {
+    left: unset;
+  }
+
+  .logo-nite {
+    position: relative;
+    left: -3rem;
+  }
+}
+
 /* .cdd-logo {
   justify-content: start;
   justify-items: start;
@@ -415,6 +481,7 @@ header .radar-rotate {
 }
 
 .cdd-nav-main li a {
+  position: relative;
   display: grid;
   text-transform: uppercase;
   text-align: center;
@@ -447,6 +514,52 @@ header .radar-rotate {
   translate: 0 1.57rem;
 }
 
+@media (orientation: portrait) {
+  .cdd-nav-main li a {
+    font-size: 1.4rem;
+  }
+
+  .active:after {
+    border-radius: 50%;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+  }
+}
+
+/* BURGER */
+.burger {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .burger {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 0.4rem;
+    position: fixed;
+    top: 1rem;
+    right: 0;
+    width: 4rem;
+    height: 3.2rem;
+    background-color: rgba(var(--cdd-col-text), 0.22);
+    z-index: 100;
+    min-width: unset;
+    min-height: unset;
+    padding: 0;
+    border-radius: 2rem 0 0 2rem;
+    border: 0.1rem solid rgba(var(--cdd-col-text), 1);
+    border-right: transparent;
+  }
+
+  .burger div {
+    height: 0.1rem;
+    width: 2.4rem;
+    background-color: rgba(var(--cdd-col-text), 1);
+  }
+}
+
 /* END - MAIN NAV */
 
 .cdd-nav-social,
@@ -466,9 +579,6 @@ header .radar-rotate {
 .cdd-nav-2nd {
   border-right: var(-red);
 }
-.cdd-logotype {
-  height: 1.4rem;
-}
 
 nav {
   justify-self: center;
@@ -477,6 +587,46 @@ nav {
   text-align: center;
   color: rgba(var(--cdd-col-back), 1);
   align-items: center;
+}
+
+@media (orientation: portrait) {
+  .cdd-nav-main {
+    padding: 8rem 2rem 2rem 2rem;
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    background: rgba(var(--cdd-col-back), 0.88);
+    z-index: 10;
+    box-shadow: 0 0 4rem 1rem rgba(var(--cdd-col-text), 1);
+    height: 80%;
+    position: absolute;
+    justify-content: end;
+    justify-items: end;
+    text-align: right;
+  }
+
+  .cdd-nav-main,
+  .cdd-nav-2nd,
+  .cdd-nav-social {
+    position: fixed;
+    height: fit-content;
+
+    background: rgba(var(--cdd-col-back), 0.88);
+    box-shadow: 0 0 4rem 1rem rgba(var(--cdd-col-text), 1);
+  }
+
+  .cdd-nav-2nd,
+  .cdd-nav-social {
+    padding: 1rem;
+    bottom: 0;
+  }
+  .cdd-nav-2nd {
+    left: 0;
+  }
+
+  .cdd-nav-social {
+    right: 0;
+  }
 }
 
 /* GRAPH PAGE */

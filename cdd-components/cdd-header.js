@@ -147,6 +147,8 @@ class headerTemplate extends HTMLElement {
         </svg>
       </a>
     </nav>
+
+    
   </header>`;
   }
 }
