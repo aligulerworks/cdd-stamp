@@ -392,6 +392,11 @@ header:after {
     align-items: start;
     align-content: start;
   }
+
+  .cdd-logo-case {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .radar-rotate,
@@ -414,6 +419,7 @@ header:after {
   .logo-day,
   .logo-nite {
     grid-auto-flow: unset;
+    gap: 0.7rem;
   }
 }
 
