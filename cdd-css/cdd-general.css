@@ -389,6 +389,8 @@ header:after {
     z-index: 12;
     justify-content: start;
     width: fit-content;
+    align-items: start;
+    align-content: start;
   }
 }
 
@@ -450,6 +452,7 @@ header .radar-rotate {
 @media (orientation: portrait) {
   .cdd-logotype {
     height: auto;
+    width: auto;
   }
 
   .radar-rotate {
