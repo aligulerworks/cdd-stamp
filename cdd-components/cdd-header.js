@@ -6,7 +6,16 @@ class headerTemplate extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
+
+    <button class="burger" id="cdd-burger">
+      <div class="ham-top"></div>
+      <div class="ham-bottom"></div>
+    </button>
+    
     <header>
+
+
+
     <a href="./index.html" id="cdd-logo"class="cdd-logo">
       <div class="radar-rotate">
         <img
@@ -95,6 +104,8 @@ class headerTemplate extends HTMLElement {
           />
         </svg>
       </a>
+      <sprites-component></sprites-component>
+
     </nav>
 
     <nav class="cdd-nav-social">
@@ -146,6 +157,7 @@ class headerTemplate extends HTMLElement {
           />
         </svg>
       </a>
+ 
     </nav>
 
     

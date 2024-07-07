@@ -1,0 +1,73 @@
+/* BURGER - CDD Mobile Menu Stylings and Anims*/
+.burger {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .burger {
+    transform-origin: center;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 0.4rem;
+    position: fixed;
+    top: 1.2rem;
+    right: 0;
+    width: 4rem;
+    height: 3.2rem;
+    background-color: rgba(var(--cdd-col-text), 0.22);
+    z-index: 200;
+    min-width: unset;
+    min-height: unset;
+    padding: 0;
+    border-radius: 2rem 0 0 2rem;
+    border: 0.1rem solid rgba(var(--cdd-col-text), 1);
+    border-right: transparent;
+  }
+
+  .burger div {
+    transform-origin: center;
+    height: 0.2rem;
+    width: 1.8rem;
+    background-color: rgba(var(--cdd-col-text), 1);
+    border-radius: 1rem;
+    rotate: 0;
+    translate: 0rem 0rem;
+    transition: rotate 576ms linear, translate 144ms linear;
+    pointer-events: none;
+  }
+
+  .burger .crunch-top {
+    rotate: 405deg;
+    translate: 0 0.3rem;
+  }
+
+  .burger .crunch-bottom {
+    rotate: -405deg;
+    translate: 0 -0.3rem;
+  }
+
+  /* Animate Mobile Menus */
+
+  .nav-main-in,
+  .nav-2nd-in,
+  .nav-social-in {
+    translate: 0% 0%;
+  }
+
+  .nav-main-in {
+    transition-delay: 0ms;
+  }
+  .nav-2nd-in {
+    transition-delay: 200ms;
+  }
+  .nav-social-in {
+    transition-delay: 400ms;
+  }
+
+  .header-full {
+    height: 100%;
+    background-color: rgba(var(--cdd-col-text), 0.55);
+    backdrop-filter: blur(3px);
+  }
+}

@@ -47,9 +47,6 @@ class footerTemplate extends HTMLElement {
           <li>Email</li>
         </ul>
       </div>
-    </section>
-    <section>
-      <sprites-component></sprites-component>
     </section>`;
   }
 }
